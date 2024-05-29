@@ -24,5 +24,7 @@ Route::get('/backend', function () {
     return view('backend.master');
 });
 
+Route::resource('article', ArticleController::class);
+
 
 
