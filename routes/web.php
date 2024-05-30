@@ -20,9 +20,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/backend', function () {
+Route::get('/', function () {
     return view('backend.master');
 });
+
+Route::resource('article', ArticleController::class);
 
 
 
