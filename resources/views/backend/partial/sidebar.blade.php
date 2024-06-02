@@ -8,7 +8,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link {{Request::is('article') ? 'active':''}}" href="{{route('article.index')}}">
               <i class="bi bi-journal-text"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span class="menu-title">Artikel</span>
             </a>

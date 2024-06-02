@@ -25,9 +25,7 @@ class ArticleController extends Controller
 
         Article::create([
             "title" => $request->input('title'),
-            "content" => $request->input('content'),
-        
-           
+            "content" => $request->input('content'),          
         ]);
         return redirect()->route('article.index')->with('status', 'Sukses Tambah Data');
     }
