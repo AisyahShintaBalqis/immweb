@@ -23,7 +23,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('backend.master');
 });
-
+Route::get('/contact', function () {
+    return view('contact.contact');
+});
 // Route::resource('article', ArticleController::class);
 
 
