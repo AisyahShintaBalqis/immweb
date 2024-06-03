@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Semua Data Artikel!</h4>
-                <a href="" class="btn btn-primary mb-3 text-white">Tambah Data</a>
+                <a href="{{route('article.create')}}" class="btn btn-primary mb-3 text-white">Tambah Data</a>
                 <div class="table-responsive pt-3">
                     <table class="table table-bordered">
                         <thead>
