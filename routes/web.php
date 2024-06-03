@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,11 +24,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('backend.master');
 });
-Route::get('/contact', function () {
-    return view('contact.contact');
-});
+
 // Route::resource('article', ArticleController::class);
 
 
 
 Route::resource('article', ArticleController::class);
+Route::resource('contact', ContactController::class);
