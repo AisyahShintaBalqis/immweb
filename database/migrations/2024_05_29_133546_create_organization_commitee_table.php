@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('organizational_structure', function (Blueprint $table) {
+        Schema::create('organization_commitee', function (Blueprint $table) {
             $table->id();
             $table->string('position_name');
+            $table->string('nia');
             $table->unsignedBigInteger('member_id')->nullable();
-            $table->date('start_date')->nullable();
-            $table->date('end_date')->nullable();
             $table->foreign('member_id')->references('id')->on('members')->onDelete('set null');
             $table->timestamps();
         });
