@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->string('phone', 20)->nullable();
             $table->string('email')->unique();
+            $table->string('universitas')->nullable();
+            $table->string('komisariat')->nullable();
             $table->date('joining_date')->nullable();
             $table->string('profile_picture')->nullable();
             $table->timestamps();

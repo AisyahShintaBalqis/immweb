@@ -12,6 +12,20 @@ class UserController extends Controller
         return view('user.create');
     }
 
+    public function store(Request $request){
+
+        // dd($request->all());
+
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+            'role' => 'required|in:member,admin',
+        ]);
+
+        return redirect()->route('users.index')->with('success', 'User created successfully.');
+    }
+
     public function index()
     {
         // Ambil semua data pengguna
@@ -20,5 +34,6 @@ class UserController extends Controller
         // Tampilkan ke view
         return view('user.index', compact('users'));
     }
+
 
 }
