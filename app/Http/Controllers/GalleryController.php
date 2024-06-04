@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class GalleryController extends Controller
 {
     public function index()
     {
-        return view('contact.index');
+        return view('gallery.index');
     }
     public function create()
     {
-        return view('contact.create');
+        return view('gallery.create');
     }
     public function store(Request $request)
     {
@@ -24,14 +24,14 @@ class ContactController extends Controller
             'phone' => 'required|string|max:15',
         ]);
 
-        Contact::create([
+        Gallery::create([
             'name' => $request->name,
             'name' => $request->jabatan,
             'email' => $request->email,
             'phone' => $request->phone,
         ]);
 
-        return redirect()->route('contact.index')->with('success', 'Informasi kontak berhasil ditambahkan');
+        return redirect()->route('gallery.index')->with('success', 'Informasi kontak berhasil ditambahkan');
     }
 
     public function show($id)
@@ -41,8 +41,8 @@ class ContactController extends Controller
 
     public function edit($id)
     {
-        $contact = Contact::findOrFail($id);
-        return view('contacts.edit', compact('contact'));
+        $gallery = Gallery::findOrFail($id);
+        return view('gallery.edit', compact('gallery'));
     }
 
     public function update(Request $request, $id)
@@ -54,15 +54,15 @@ class ContactController extends Controller
             'phone' => 'required|string|max:15',
         ]);
 
-        $contact = Contact::findOrFail($id);
-        $contact->update([
+        $gallery = Gallery::findOrFail($id);
+        $gallery->update([
             'name' => $request->name,
             'name' => $request->jabatan,
             'email' => $request->email,
             'phone' => $request->phone,
         ]);
 
-        return redirect()->route('contact.edit')->with('success', 'Informasi kontak berhasil diubah');
+        return redirect()->route('gallery.edit')->with('success', 'Informasi kontak berhasil diubah');
     }
 
     public function destroy($id)
