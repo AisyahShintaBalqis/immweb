@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Show contact page</h1>
+    <h1>Show Gallery page</h1>
 </body>
 
 </html>
