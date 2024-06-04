@@ -1,15 +1,22 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       {{-- <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{asset('admin/images/logo.svg')}}" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('admin/images/logo-mini.svg')}}" alt="logo"/></a>
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{asset('admin/images/imm.png')}}" alt="logo" style="width: 30px; height: auto; margin-right: 10px;"></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('admin/images/imm.png')}}" alt="logo" style="width: 30px; height: auto; margin-right: 10px;"></a>
       </div> --}}
 
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html" class="mr-5" style="font-size: 12px; font-family: 'Verdana', sans-serif; font-weight: bold; text-align: left;" alt="logo">IKATAN<br>MAHASISWA<br>MUHAMMADIYAH</a>
-        <a class="navbar-brand brand-logo-mini" href="index.html" style="font-size: 12px; font-family: 'Verdana', sans-serif; font-weight: bold;">IMM</a>
-      </div>
-    
 
+     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+      <a class="navbar-brand brand-logo" href="index.html" style="font-size: 12px; font-family: 'Verdana', sans-serif; font-weight: bold; text-align: left;" alt="logo">
+          <img src="{{asset('admin/images/imm.png')}}" alt="logo" style="width: 30px; height: auto; float: left; margin-right: 10px;">
+          <span style="display: inline-block;">
+            <span style="display: block;">IKATAN</span>
+            <span style="display: block;">MAHASISWA</span>
+            <span style="display: block;">MUHAMMADIYAH</span>
+        </span>
+      </a>
+      <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('admin/images/imm.png')}}" alt="logo" style="width: 30px; height: auto; margin-center: 10px;"></a>
+  </div>
+  
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
           <span class="icon-menu"></span>
